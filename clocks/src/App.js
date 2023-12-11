@@ -1,13 +1,30 @@
-
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./components/home/Home";
+import About from "./components/about/About";
+import Store from "./components/store/Store";
+import Contact from "./components/contact/Contact";
+import Cart from "./components/cart/Cart";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Clocks</h1>
-      </header>
-    </div>
+    <Router>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/store">Store</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/cart">Cart</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/store" element={<Store />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+    </Router>
   );
 }
 
