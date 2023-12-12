@@ -1,0 +1,79 @@
+footer {
+  background-color: rgba(252, 252, 253, 1);
+  padding: 40px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  text-align: left;
+  margin-bottom: 20px; 
+}
+
+
+.footer-heading {
+  font-family: 'Rubik';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.text {
+  font-family: 'Poppins';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(53, 57, 69, 1);
+  margin-bottom: 50px; 
+  line-height: 2.5;
+}
+
+.link {
+  font-family: 'Poppins';
+  font-size: 24px;
+  font-weight: 560;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-decoration: none;
+  line-height: 2.5;
+  color: rgba(59, 82, 102, 1);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  color: black;
+}
+
+.icon {
+  font-size: 20px;
+  margin-right: 10px;
+  color: rgb(1, 1, 1);
+
+}
+
+.copyright {
+  font-family: 'Rubik';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: right;
+  color: rgba(149, 161, 187, 1);
+}
+
+.clock-image {
+  width: 200px;
+  height: 200px;
+}
