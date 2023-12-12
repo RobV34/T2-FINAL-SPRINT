@@ -43,7 +43,7 @@ textarea {
   margin-bottom: 15px;
 }
 
-button {
+button.contact-submit-button {
   background-color: rgba(191, 174, 122, 0.5);
   color: black;
   padding: 10px;
@@ -53,5 +53,9 @@ button {
   line-height: 24px;
   letter-spacing: 0px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
+button.contact-submit-button:hover {
+  background-color:rgba(188, 171, 119, 0.2);
+}
