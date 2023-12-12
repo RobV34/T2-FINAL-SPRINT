@@ -1,39 +1,37 @@
-
-
 import React, { useState, useEffect } from 'react';
 import clocks from './clocks.json'; // Assuming JSON is in the same directory
 import './Store.css';
 
 function Store({ onAddToCart}) {
-  const [selectedModel, setSelectedModel] = useState(clocks[0].id);
-  const [selectedSize, setSelectedSize] = useState(clocks[0].sizes[0].size);
+  const [selectedModel, setSelectedModel] = useState(clocks[0].id); // New state for model
+  const [selectedSize, setSelectedSize] = useState(clocks[0].sizes[0].size); // New state for size
   const [selectedColor, setSelectedColor] = useState(clocks[0].colors[0]); // New state for color
 
   useEffect(() => {
-    // This can be used to fetch data if clocks were loaded from an API
+    // Update selectedSize when selectedModel changes
   }, []);
 
-  const handleModelChange = (e) => {
-    const newModel = e.target.value;
-    setSelectedModel(newModel);
+  const handleModelChange = (e) => { // This function updates the selectedModel state
+    const newModel = e.target.value; // Get the new model from the event
+    setSelectedModel(newModel); // Update selectedModel state
     // Reset size and color to the first option when model changes
-    const model = clocks.find(clock => clock.id === newModel);
-    setSelectedSize(model.sizes[0].size);
-    setSelectedColor(model.colors[0]);
+    const model = clocks.find(clock => clock.id === newModel); // Find the new model
+    setSelectedSize(model.sizes[0].size); // Set the size to the first option
+    setSelectedColor(model.colors[0]); // Set the color to the first option
   };
 
-  const handleSizeChange = (e) => {
-    setSelectedSize(e.target.value);
+  const handleSizeChange = (e) => { // This function updates the selectedSize state
+    setSelectedSize(e.target.value); // Update selectedSize state
   };
 
-  const handleColorChange = (e) => {
-    setSelectedColor(e.target.value);
+  const handleColorChange = (e) => { // This function updates the selectedColor state
+    setSelectedColor(e.target.value); // Update selectedColor state
   };
 
-  const getPrice = () => {
-    const model = clocks.find(clock => clock.id === selectedModel);
-    const size = model.sizes.find(s => s.size === selectedSize);
-    return size.price;
+  const getPrice = () => { // This function returns the price of the selected clock
+    const model = clocks.find(clock => clock.id === selectedModel); // Find the selected model
+    const size = model.sizes.find(s => s.size === selectedSize); // Find the selected size
+    return size.price; // Return the price of the selected size
   };
 
   const addItemToCart = () => { // This function constructs the cart item and calls onAddToCart
@@ -43,9 +41,9 @@ function Store({ onAddToCart}) {
       modelName: model.name,
       size: selectedSize,
       color: selectedColor,
-      price: getPrice()
+      price: getPrice() // Use getPrice to get the price
     };
-    onAddToCart(itemToAdd);
+    onAddToCart(itemToAdd); // Call onAddToCart with the new item
   };
 
   return (
@@ -84,3 +82,7 @@ function Store({ onAddToCart}) {
 }
 
 export default Store;
+
+
+
+  
