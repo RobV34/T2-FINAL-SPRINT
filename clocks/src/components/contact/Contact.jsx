@@ -1,11 +1,32 @@
 import React from 'react';
+import './Contact.css';
+import Header from '../header/Header';
+import Footer from '../footer/Footer';
 
 const Contact = () => {
   return (
     <div>
-      <h1>Welcome to Custom Clocks</h1>
-      <p>Find the perfect clock for your home.</p>
-      {/* Additional content */}
+      
+      <div className="contact-container">
+        <h2>Contact Us</h2>
+        <p>
+          Feel free to reach out to us if you have any questions or inquiries about our custom clocks.
+        </p>
+        <form>
+        
+          <label htmlFor="name">Name:</label>
+          <input type="text" id="name" name="name" />
+
+          <label htmlFor="email">Email:</label>
+          <input type="email" id="email" name="email" />
+
+          <label htmlFor="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+          
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      
     </div>
   );
 };
