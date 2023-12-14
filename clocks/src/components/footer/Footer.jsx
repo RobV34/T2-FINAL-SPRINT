@@ -8,28 +8,20 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section">
           <h3 className="footer-heading">Custom Clocks</h3>
-          <img src="david-hepworth-xLj-Wjh0Ho4-unsplash.jpg" alt="Clock Image" className="clock-image"/>
+          <img src="Images/clock.png" alt="Clock Image" className="clock-image"/>
         </div>
         <div className="footer-section">
           <h4 className="link">Contact Us</h4>
           <p className="text">
-            sweetdeli@gmail.com. <br />
-            +1-2345-6789. <br />
-            123 Ave, New York, USA
+            customclocks@gmail.com <br />
+            1-709-457-6789 <br />
+            123 Water Street <br />
+            Corner Brook, NL <br />
+            A3F 8L5
+
           </p>
         </div>
-        <div className="footer-section">
-          <h4 className="link">About</h4>
-          <p className="text">sweetdeli@gmail.com. <br />
-            +1-2345-6789. <br />
-            123 Ave, New York, USA</p>
-        </div>
-        <div className="footer-section">
-          <h4 className="link">Store</h4>
-          <p className="text">sweetdeli@gmail.com. <br />
-            +1-2345-6789. <br />
-            123 Ave, New York, USA</p>
-        </div>
+          
       </div>
       <div className="footer-bottom">
         <div className="social-icons">
@@ -53,3 +45,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+// The footer component is a functional component that renders the footer of the website.
