@@ -1,0 +1,58 @@
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 1);
+  }
+  
+  .custom-clocks-heading {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 63px;
+    letter-spacing: -0.4px;
+    text-align: left;
+    margin: 20px;
+  }
+  
+  nav {
+    display: flex;
+  }
+  
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between; 
+    width: 800px; 
+  }
+  
+  .nav-link {
+    font-family: 'Public Sans';
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+    position: relative;
+    transition: color 0.3s ease; 
+    padding: 13px 20px; 
+    border-radius: 20px;
+    gap: 10px;
+  }
+  
+  .nav-link:hover {
+    color: black; 
+    background: rgba(191, 174, 122, 0.5); 
+  }
+  
+  .nav-link:not(:last-child) {
+    margin-right: 0;
+  }

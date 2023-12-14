@@ -1,0 +1,65 @@
+
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .contact-container h2 {
+    font-family: 'Rubik';
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+  
+  .contact-container p {
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0px;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  button.contact-submit-button {
+    background-color: rgba(191, 174, 122, 0.5);
+    color: black;
+    padding: 10px;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button.contact-submit-button:hover {
+    background-color:rgba(188, 171, 119, 0.2);
+  }
+
+/* Path: clocks/src/components/contact/Contact.js */

@@ -3,19 +3,21 @@
     "id": "1",
     "name": "Classic Clock",
     "sizes": [
-      { "size": "Small", "price": 49.99 },
-      { "size": "Medium", "price": 75.99 },
-      { "size": "Large", "price": 99.99 }
+      { "size": "Desktop", "price": 49.99 },
+      { "size": "Wall", "price": 75.99 }
+     
     ],
     "colors": ["Chrome", "Bronze", "Red", "Yellow", "Blue", "Green"]
+  
   },
   {
     "id": "2",
     "name": "Modern Clock",
     "sizes": [
-      { "size": "Small", "price": 59.99 },
-      { "size": "Medium", "price": 85.99 },
-      { "size": "Large", "price": 109.99 }
+      { "size": "Desktop", "price": 59.99 },
+      { "size": "Wall", "price": 85.99 }
+      
+      
     ],
     "colors": ["Chrome", "Bronze", "Red", "Yellow", "Blue", "Green"]
   },
@@ -24,9 +26,9 @@
     "id": "3",
     "name": "Retro Clock",
     "sizes": [
-      { "size": "Small", "price": 69.99 },
-      { "size": "Medium", "price": 95.99 },
-      { "size": "Large", "price": 119.99 }
+      { "size": "Desktop", "price": 69.99 },
+      { "size": "Wall", "price": 95.99 }
+      
     ],
     "colors": ["Chrome", "Bronze", "Red", "Yellow", "Blue", "Green"]
   }

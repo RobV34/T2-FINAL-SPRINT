@@ -1,7 +1,4 @@
 
-
-/* Cart.css */
-
 .cart-container {
     background: #fff;
     border-radius: 8px;
@@ -48,16 +45,38 @@
   }
   
   .totals {
-    text-align: right;
+    font-family: "Playfair Display", serif;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .totals p:first-child {
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
     margin-bottom: 20px;
   }
   
   .totals p {
-    margin: 5px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
   }
   
+  .totals p:last-child {
+    color: #d35400;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  
+  
   button {
-    background-color: #F2D16D;
+    background-color: #45a049;
     border: none;
     border-radius: 4px;
     color: white;
@@ -72,7 +91,7 @@
   }
   
   button:hover {
-    background-color: #45a049;
+    background-color: #F2D16D;
   }
   
   input[type="text"],

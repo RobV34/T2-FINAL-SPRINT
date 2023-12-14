@@ -1,0 +1,30 @@
+
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    margin: auto;
+  }
+  
+  .slideshow-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .controls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .controls button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: black;
+    background-color: azure;
+  }
+  
