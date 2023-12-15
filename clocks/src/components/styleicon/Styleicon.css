@@ -1,0 +1,39 @@
+#Styleicon {
+    background-color: #fbfbfb;
+    padding-top: 4%; 
+    padding-bottom: 5%; 
+    margin-top: 5%; 
+}
+
+#Styleicon > h3 {
+    font-family: 'Avenir', 'Public Sans';
+    font-size: 1.6rem; 
+    color: #594A45; 
+    text-align: left;
+    margin-left: 12%;   
+}
+
+#Styleicon-imagegrid {
+    display: flex;
+    flex-wrap: nowrap; 
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#Styleicon-imagegrid > figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+#Styleicon-imagegrid figcaption {
+    font-family: 'Avenir', 'Public Sans';
+    color: black; 
+    padding-top: 4%;
+    padding-bottom: 4%;  
+   font-size: 1.2rem;
+   font-weight: 800;
+}

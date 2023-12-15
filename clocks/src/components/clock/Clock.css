@@ -1,0 +1,92 @@
+
+/* Clock.css */
+#clock {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: none;
+    border: solid 5px rgba(242, 242, 242, 0.25); 
+    /* border-radius: 500px; */
+  }
+  
+  .hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    background-color: #FFFFFF; /* hands are often black */
+  }
+  
+  #hour-hand {
+    width: 10px;
+    height: 100px;
+      
+  }
+  
+  #minute-hand {
+    width: 6px;
+    height: 140px;
+    
+  }
+  
+  #second-hand {
+    width: 4px;
+    height: 180px;
+    background-color: #F2D16D; /* second hands are often red */
+      
+  }
+
+  #Clock-center{
+    width: 15%;
+    height: 15%;
+    position: absolute;
+    top: 43%;
+    left: 43%; 
+    background-color: #F2F2F2;
+    opacity: .9;
+    z-index: 10;
+    border-radius: 200px;
+   filter: blur(0.5px)
+  }
+
+  #Clock-circle12 {
+    position: absolute; 
+    background-color:#F2F2F2; 
+    width: 5%;
+    height: 5%;
+    top: 3%; 
+    left: 48%; 
+    border-radius: 200px;
+  }
+
+  #Clock-circle3 {
+    position: absolute; 
+    background-color:#F2F2F2; 
+    width: 5%;
+    height: 5%;
+    top: 45%; 
+    left: 92%; 
+    border-radius: 200px;
+  }
+
+  #Clock-circle6 {
+    position: absolute; 
+    background-color:#F2F2F2; 
+    width: 5%;
+    height: 5%;
+    top: 92%; 
+    left: 48%; 
+    border-radius: 200px;
+  }
+
+  #Clock-circle9 {
+    position: absolute; 
+    background-color:#F2F2F2; 
+    width: 5%;
+    height: 5%;
+    top: 45%; 
+    left: 3%; 
+    border-radius: 200px;
+  }
+
+/* Path: clocks/src/components/clock/Clock.js */

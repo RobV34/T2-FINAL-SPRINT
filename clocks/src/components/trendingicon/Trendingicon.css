@@ -1,0 +1,47 @@
+#Trendingicon {
+    margin-top: 5%; 
+    margin-bottom: 12%; 
+    justify-content: flex-start;
+}
+
+#Trending-title-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 6%;
+    margin-right: 6%; 
+}
+
+#Trending-title-btn > h4 {
+    font-family: 'Avenir', 'Public Sans';
+    font-size: 1.3rem; 
+    color: #594A45; 
+    text-align: left;
+    margin-bottom: 0%;  
+    margin-top: 0%; 
+}
+
+#Trending-title-btn > button {
+    color: white; 
+    font-size: .9rem; 
+    font-weight: 700;
+    background-color:#594A45;
+    border: none;
+    border-radius: 20px;
+    padding: 1% 3%;  
+
+}
+
+#Trendingicon-imagegrid > img {
+    margin-top: 3%;
+    border-radius: 5px;
+}
+
+#Trendingicon-imagegrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* margin-left: 6%;
+    margin-right: 6%; */
+}
+

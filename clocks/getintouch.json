@@ -1,0 +1,22 @@
+{
+  "getintouch": [
+      {
+          "id": 1,
+          "name": "Amy Dalziel",
+          "email": "amy@gmail.com",
+          "message": "Please let me know your business hours."
+      },
+      {
+          "id": 2,
+          "name": "Amy Dalziel 2",
+          "email": "amy2@gmail.com",
+          "message": "Please let me know your business hours 2."
+      },
+      {
+          "id": 3,
+          "name": "Amy Dalziel 3",
+          "email": "amy3@gmail.com",
+          "message": "Please let me know your business hours 3."
+      }
+    ]
+}
