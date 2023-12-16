@@ -52,7 +52,7 @@ const About = () => {
         <div className='about-info-section'>
         <h2>Connect With Us</h2>
         <p>
-        Got questions or need a hand? Shoot us an email at hello.customclocks@gmail.com. Join our community of clock enthusiasts for the latest designs, promotions, and all things clocks!
+        Got questions or need a hand? Shoot us an email at customclocks@gmail.com. Join our community of clock enthusiasts for the latest designs, promotions, and all things clocks!
         </p>
         </div>
       </div>

@@ -1,42 +1,36 @@
-
-
-import React, { useState, useEffect } from 'react';
-import clocks from './clocks.json'; // Assuming JSON is in the same directory
+import React, { useState } from 'react'; // Import useState
+import useClocks from './useClocks'; // Import the custom hook
+import imageUrls from './imageData'; // Import the image data
+import Slideshow from './Slideshow'; // Import the Slideshow component
 import './Store.css';
-
-function Store({ onAddToCart}) {
-  const [selectedModel, setSelectedModel] = useState(clocks[0].id); // New state for model
-  const [selectedSize, setSelectedSize] = useState(clocks[0].sizes[0].size); // New state for size
-  const [selectedColor, setSelectedColor] = useState(clocks[0].colors[0]); // New state for color
-
-  useEffect(() => {
-    // Update selectedSize when selectedModel changes
-  }, []);
-
-  const handleModelChange = (e) => { // This function updates the selectedModel state
-    const newModel = e.target.value; // Get the new model from the event
-    setSelectedModel(newModel); // Update selectedModel state
-    // Reset size and color to the first option when model changes
-    const model = clocks.find(clock => clock.id === newModel); // Find the new model
-    setSelectedSize(model.sizes[0].size); // Set the size to the first option
-    setSelectedColor(model.colors[0]); // Set the color to the first option
+ 
+function Store({ onAddToCart }) { // Pass onAddToCart as a prop
+  const {
+    clocks,
+    selectedModel,
+    selectedSize,
+    selectedColor,
+    updateSelectedModel,
+    updateSelectedSize,
+    updateSelectedColor,
+    getPrice
+  } = useClocks(); // Call the custom hook
+ 
+  const handleModelChange = (e) => {
+    updateSelectedModel(e.target.value);
   };
-
-  const handleSizeChange = (e) => { // This function updates the selectedSize state
-    setSelectedSize(e.target.value); // Update selectedSize state
+ 
+  const handleSizeChange = (e) => {
+    updateSelectedSize(e.target.value);
   };
-
-  const handleColorChange = (e) => { // This function updates the selectedColor state
-    setSelectedColor(e.target.value); // Update selectedColor state
+ 
+  const handleColorChange = (e) => {
+    updateSelectedColor(e.target.value);
   };
-
-  const getPrice = () => { // This function returns the price of the selected clock
-    const model = clocks.find(clock => clock.id === selectedModel); // Find the selected model
-    const size = model.sizes.find(s => s.size === selectedSize); // Find the selected size
-    return size.price; // Return the price of the selected size
-  };
-
-  const addItemToCart = () => { // This function constructs the cart item and calls onAddToCart
+ 
+  const [itemAdded, setItemAdded] = useState(false); // Add state to track if item was added to cart
+ 
+  const addItemToCart = () => {
     const model = clocks.find(clock => clock.id === selectedModel);
     const itemToAdd = {
       id: selectedModel,
@@ -45,12 +39,17 @@ function Store({ onAddToCart}) {
       color: selectedColor,
       price: getPrice() // Use getPrice to get the price
     };
-    onAddToCart(itemToAdd); // Call onAddToCart with the new item
+    onAddToCart(itemToAdd);
+    setItemAdded(true); // Set itemAdded to true when item is added to cart
+    setTimeout(() => setItemAdded(false), 2000); // Reset itemAdded to false after 2 seconds
   };
-
+ 
   return (
     <div className="store-container">
       <h1>Build Your Own Clock</h1>
+
+      <Slideshow images={imageUrls} />
+    
       <div className="model-selector">
         <label>Choose a model:</label>
         <select value={selectedModel} onChange={handleModelChange}>
@@ -62,7 +61,7 @@ function Store({ onAddToCart}) {
       <div className="size-selector">
         <label>Choose a size:</label>
         <select value={selectedSize} onChange={handleSizeChange}>
-          {clocks.find(clock => clock.id === selectedModel).sizes.map(size => (
+          {clocks.find(clock => clock.id === selectedModel)?.sizes.map(size => (
             <option key={size.size} value={size.size}>{size.size}</option>
           ))}
         </select>
@@ -70,7 +69,7 @@ function Store({ onAddToCart}) {
       <div className="color-selector">
         <label>Choose a color:</label>
         <select value={selectedColor} onChange={handleColorChange}>
-          {clocks.find(clock => clock.id === selectedModel).colors.map(color => (
+          {clocks.find(clock => clock.id === selectedModel)?.colors.map(color => (
             <option key={color} value={color}>{color}</option>
           ))}
         </select>
@@ -78,9 +77,10 @@ function Store({ onAddToCart}) {
       <div className="price-display">
         Price: ${getPrice()}
       </div>
+      {itemAdded && <div className="cart-notification">Item added to cart!</div>}
       <button className="buy-button" onClick={addItemToCart}>Add to Cart</button>
     </div>
   );
 }
-
+ 
 export default Store;
