@@ -35,6 +35,11 @@ import React from 'react';
       url: '/images/bluecontemporary.jpg',
       color: "Blue",
       style: "Contemporary"
+    },
+    {
+      url: '/images/blackoldfashioned.jpg',
+      color: "Black",
+      style: "Old-Fashioned"
     }
   ]; 
   

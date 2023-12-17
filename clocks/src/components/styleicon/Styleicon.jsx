@@ -16,14 +16,14 @@ const Styleicon = ({title}) => {
 
 <figure>
 <img src='./images/modernclock.jpg' width={"300px"} height={"300px"}/>
-<figcaption>Modern</figcaption>
+<figcaption>Retro</figcaption>
 <Homebutton label={"Explore"}/>
 </figure>
 
 
 <figure>
 <img src='./images/minimalclock.jpg' width={"300px"} height={"300px"}/>
-<figcaption>Minimalist</figcaption>
+<figcaption>Contemporary</figcaption>
 <Homebutton label={"Explore"}/>
 </figure>
 
