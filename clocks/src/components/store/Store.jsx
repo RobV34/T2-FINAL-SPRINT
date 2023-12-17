@@ -1,6 +1,6 @@
 import React, { useState } from 'react'; // Import useState
 import useClocks from './useClocks'; // Import the custom hook
-import imageUrls from './imageData'; // Import the image data
+import imageInfo from './imageData'; // Import the image data
 import Slideshow from './Slideshow'; // Import the Slideshow component
 import './Store.css';
  
@@ -48,7 +48,7 @@ function Store({ onAddToCart }) { // Pass onAddToCart as a prop
     <div className="store-container">
       <h1>Build Your Own Clock</h1>
 
-      <Slideshow images={imageUrls} />
+      <Slideshow images={imageInfo} />
     
       <div className="model-selector">
         <label>Choose a model:</label>

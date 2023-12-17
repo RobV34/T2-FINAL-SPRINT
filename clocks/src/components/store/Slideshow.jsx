@@ -1,13 +1,13 @@
 
 
 import React, { useState, useEffect } from 'react';
-import imageUrls from './imageData'; // Import the image data
 import './Slideshow.css'; // Make sure to create appropriate CSS for controls
 
 const Slideshow = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hover, setHover] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
+
 
   useEffect(() => {
     if (isPaused) return;
@@ -40,13 +40,18 @@ const Slideshow = ({ images }) => {
     <div className="slideshow-container"
          onMouseEnter={handleMouseEnter}
          onMouseLeave={handleMouseLeave}>
-      <img src={images[currentIndex]} alt={`Slide ${currentIndex}`}/>
+      <img src={images[currentIndex].url} alt={`Slide ${currentIndex}`}/>
+     
       <div className="controls">
+          <p>{images[currentIndex].style} {images[currentIndex].color} Clock</p>
+          <div className='controlbtn'>
         <button onClick={goToPrevious}>&lt;</button>
         <button id='pauseresumebtn' onClick={togglePause}>
           {isPaused ? 'Resume' : 'Pause'}
         </button>
         <button onClick={goToNext}>&gt;</button>
+        </div>
+       
       </div>
     </div>
   );
